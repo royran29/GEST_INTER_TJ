@@ -9,6 +9,8 @@ namespace GEST_INTER_TJ.Interfaces.IGestionTJ
     public interface IGestionesTJ
     {
 
+        #region Canales
+
         clsRecuperaIdTCOUT RecuperaIdTC(clsRecuperaIdTCIN pInput);
 
         clsActualizaDatosOUT ActualizaDatos(clsActualizaDatosIN pInput);
@@ -26,5 +28,17 @@ namespace GEST_INTER_TJ.Interfaces.IGestionTJ
         clsRedencionOUT RedencionPuntos(clsRedencionIN pInput);
 
         clsTipoCambioActualizaOUT TipoCambioActualiza(clsTipoCambioActualizaIN pInput);
+
+        #endregion
+
+        #region Clientes
+
+        clsGrabaClientesOut GrabaClientes(clsGrabaClientesIn pInput);
+
+        clsGrabaDireccionesOut GrabaDirecciones(clsGrabaDireccionesIn pInput);
+
+        clsGrabaTelefonosOut GrabaTelefonos(clsGrabaTelefonosIn pInput);
+
+        #endregion
     }
 }

@@ -276,5 +276,85 @@ namespace GEST_INTER_TJ.Datos
         }
 
         #endregion
+
+        #region Clientes
+
+
+        /// <summary>
+        /// Entrada para mantenimiento de clientes
+        /// </summary>
+        /// <param name="pInput"></param>
+        /// <returns></returns>
+        public clsGrabaClientesOut GrabaClientesDAO(clsGrabaClientesIn pInput)
+        {
+            clsGrabaClientesOut vResultado = new clsGrabaClientesOut();
+
+            try
+            {
+                vResultado.CodRespInterno = clsCodigoRespuesta.Exito;
+                vResultado.Mensaje = clsMensajes.Exito;
+
+            }
+            catch (Exception ex)
+            {
+                vResultado.CodRespInterno = clsCodigoRespuesta.Error;
+                vResultado.Mensaje = clsMensajes.ErrorRegistro;
+
+            }
+            return vResultado;
+        }
+
+
+        /// <summary>
+        /// Entrada para mantenimiento de direcciones 
+        /// </summary>
+        /// <param name="pInput"></param>
+        /// <returns></returns>
+        public clsGrabaDireccionesOut GrabaDireccionesDAO(clsGrabaDireccionesIn pInput)
+        {
+            clsGrabaDireccionesOut vResultado = new clsGrabaDireccionesOut();
+
+            try
+            {
+                vResultado.CodRespInterno = clsCodigoRespuesta.Exito;
+                vResultado.Mensaje = clsMensajes.Exito;
+
+            }
+            catch (Exception ex)
+            {
+                vResultado.CodRespInterno = clsCodigoRespuesta.Error;
+                vResultado.Mensaje = clsMensajes.ErrorRegistro;
+
+            }
+            return vResultado;
+        }
+
+
+        /// <summary>
+        /// Entrada para mantenimiento de telefonos 
+        /// </summary>
+        /// <param name="pInput"></param>
+        /// <returns></returns>
+        public clsGrabaTelefonosOut GrabaTelefonosDAO(clsGrabaTelefonosIn pInput)
+        {
+            clsGrabaTelefonosOut vResultado = new clsGrabaTelefonosOut();
+
+            try
+            {
+                vResultado.CodRespInterno = clsCodigoRespuesta.Exito;
+                vResultado.Mensaje = clsMensajes.Exito;
+
+            }
+            catch (Exception ex)
+            {
+                vResultado.CodRespInterno = clsCodigoRespuesta.Error;
+                vResultado.Mensaje = clsMensajes.ErrorRegistro;
+
+            }
+            return vResultado;
+        }
+
+
+        #endregion
     }
 }

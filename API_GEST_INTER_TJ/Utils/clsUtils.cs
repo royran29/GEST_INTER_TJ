@@ -404,6 +404,115 @@ namespace GEST_INTER_TJ.Utils
 
     #region Clientes
 
+    #region Clientes_GrabaClientes
+    public class clsGrabaClientesIn
+    {
+        public string Usuario { get; set; }
+        public string Estacion { get; set; }
+        public string Oficina { get; set; }
+        public string Identifica { get; set; }
+        public string TipoIdent { get; set; }
+        public string PaisIdent { get; set; }
+        public string DepartIdent { get; set; }
+        public string MunIdent { get; set; }
+        public string DistritoIdent { get; set; }
+        public string PrimerApellido { get; set; }
+        public string SegundoApellido { get; set; }
+        public string ApellidoCasada { get; set; }
+        public string PrimerNombre { get; set; }
+        public string SegundoNombre { get; set; }
+        public string TercerNombre { get; set; }
+        public string FchNacimie { get; set; }
+        public string PaisNacimie { get; set; }
+        public string DepartNacimie { get; set; }
+        public string MuniNacimie { get; set; }
+        public string DistritoNacimie { get; set; }
+        public string Situacion { get; set; }
+        public string ActEconomica { get; set; }
+        public string Nacionalidad { get; set; }
+        public string EstadoCivil { get; set; }
+        public string Profesion { get; set; }
+        public string Sexo { get; set; }
+        public string Email { get; set; }
+        public string Instruccion { get; set; }
+        public string CodTributario { get; set; }
+        public String FchIngresoPais { get; set; }
+        public string TituloPersona { get; set; }
+        public Int16 Empresa { get; set; }
+        public Int16 Entidad { get; set; }
+        public String CodMigracion { get; set; }
+        public Int32 CodMigracionConyuge { get; set; }
+
+    }
+
+    public class clsGrabaClientesOut
+    {
+        public string Mensaje { get; set; }
+        public Int32 Codigocliente { get; set; }
+        public string CodRespInterno { get; set; }
+    }
+
+    #endregion
+
+    #region Clientes_GrabaDirecciones
+    public class clsGrabaDireccionesIn
+    {
+        public string Usuario { get; set; }
+        public string Estacion { get; set; }
+        public string Oficina { get; set; }
+        public string TipoDirec { get; set; }
+        public string TipoVivienda { get; set; }
+        public string Zona { get; set; }
+        public string Direccion { get; set; }
+        public string Arrendador { get; set; }
+        public string Pais { get; set; }
+        public string Provincia { get; set; }
+        public string Ciudad { get; set; }
+        public string Distrito { get; set; }
+        public string RutaDeEntrega { get; set; }
+        public string DirCodPostal { get; set; }
+        public string MarcaEnvio { get; set; }
+        public string MarcaEnvioPlas { get; set; }
+        public Int16 Empresa { get; set; }
+        public Int16 Entidad { get; set; }
+        public Int32 Codigo { get; set; }
+    }
+
+    public class clsGrabaDireccionesOut
+    {
+        public string Mensaje { get; set; }
+        public string CodRespInterno { get; set; }
+    }
+    #endregion
+
+    #region Clientes_GrabaTelefonos
+
+    public class clsGrabaTelefonosIn
+    {
+        public string UltUserActualiza { get; set; }
+        public string UltEstacionActualiza { get; set; }
+        public string Oficina { get; set; }
+        public string TipoTelf { get; set; }
+        public string Telefono { get; set; }
+        public string Extencion { get; set; }
+        public string Telefono2 { get; set; }
+        public string Extencion2 { get; set; }
+        public string CodigoArea { get; set; }
+        public string CodigoArea2 { get; set; }
+        public string CodigoArea3 { get; set; }
+        public string Telefono3 { get; set; }
+        public string Extencion3 { get; set; }
+        public string Principal { get; set; }
+        public int Empresa { get; set; }
+        public int Entidad { get; set; }
+        public int Codigo { get; set; }
+    }
+    public class clsGrabaTelefonosOut
+    {
+        public string Mensaje { get; set; }
+        public string CodRespInterno { get; set; }
+    }
+    #endregion
 
     #endregion
 
