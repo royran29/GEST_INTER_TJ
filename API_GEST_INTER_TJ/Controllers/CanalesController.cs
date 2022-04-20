@@ -29,7 +29,7 @@ namespace GEST_INTER_TJ.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("RecuperaIDTC")]
-        public ActionResult<clsRecuperaIdTCOUT> ValidarOperaciones(clsRecuperaIdTCIN pInput)
+        public ActionResult<clsRecuperaIdTCOUT> RecuperaIDTC(clsRecuperaIdTCIN pInput)
         {
             clsRecuperaIdTCOUT resultado = vGestiones.RecuperaIdTC(pInput);
 
@@ -50,7 +50,7 @@ namespace GEST_INTER_TJ.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("ConsultaTransacciones")]
-        public ActionResult<clsConsultaTransaccionesOUT> ConsultaTransaccones(clsConsultaTransaccionesIN pInput)
+        public ActionResult<clsConsultaTransaccionesOUT> ConsultaTransacciones(clsConsultaTransaccionesIN pInput)
         {
             clsConsultaTransaccionesOUT resultado = vGestiones.ConsultaTransacciones(pInput);
 
