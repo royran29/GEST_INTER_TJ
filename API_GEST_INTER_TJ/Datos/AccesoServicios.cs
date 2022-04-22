@@ -356,5 +356,31 @@ namespace GEST_INTER_TJ.Datos
 
 
         #endregion
+
+        #region HSM
+        /// <summary>
+        /// Interface de entrada para generación de Pin
+        /// </summary>
+        /// <param name="pInput"></param>
+        /// <returns></returns>
+        public clsGenPinPvvOut GenPinPVVDAO(clsGenPinPvvIn pInput)
+        {
+            clsGenPinPvvOut vResultado = new clsGenPinPvvOut();
+
+            try
+            {
+                vResultado.CodRespInterno = clsCodigoRespuesta.Exito;
+                vResultado.Mensaje = clsMensajes.Exito;
+
+            }
+            catch (Exception ex)
+            {
+                vResultado.CodRespInterno = clsCodigoRespuesta.Error;
+                vResultado.Mensaje = clsMensajes.ErrorRegistro;
+
+            }
+            return vResultado;
+        }
+        #endregion
     }
 }

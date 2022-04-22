@@ -517,4 +517,21 @@ namespace GEST_INTER_TJ.Utils
     #endregion
 
 
+    #region HSM
+    public class clsGenPinPvvIn
+    {
+        public string NumeroReferencia { get; set; }
+        public string Canal { get; set; }
+        public string TarjetaID { get; set; }
+        public string PIN { get; set; }
+
+    }
+    public class clsGenPinPvvOut
+    {
+        public string PVV { get; set; }
+        public string Mensaje { get; set; }
+        public string CodRespInterno { get; set; }
+    }
+    #endregion
+
 }

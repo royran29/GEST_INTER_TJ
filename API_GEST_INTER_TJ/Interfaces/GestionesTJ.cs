@@ -500,5 +500,45 @@ namespace GEST_INTER_TJ.Interfaces
         }
 
         #endregion
+
+        #region HSM
+
+
+        /// <summary>
+        /// Permite generar un pin nuevo para la tarjeta indicada y retorna el nuevo PIN en el parámetro 
+        /// </summary>
+        /// <param name="pInput"></param>
+        /// <returns></returns>
+        public clsGenPinPvvOut GenPinPVV(clsGenPinPvvIn pInput)
+        {
+            clsGenPinPvvOut vResultado = new clsGenPinPvvOut();
+
+            try
+            {
+                //Valida que los parametros no sean nulos
+                if (!String.IsNullOrEmpty(pInput.NumeroReferencia)
+                     && !String.IsNullOrEmpty(pInput.Canal)
+                     && !String.IsNullOrEmpty(pInput.TarjetaID)
+                     && !String.IsNullOrEmpty(pInput.PIN)
+                   )
+                {
+                    vResultado = vServicio.GenPinPVVDAO(pInput);
+
+                    return vResultado;
+                }
+                else
+                {
+                    vResultado.CodRespInterno = clsCodigoRespuesta.Error;
+                    vResultado.Mensaje = clsMensajes.ValoresRequeridos;
+                    return vResultado;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
     }
 }

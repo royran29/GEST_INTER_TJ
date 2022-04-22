@@ -40,5 +40,12 @@ namespace GEST_INTER_TJ.Interfaces.IGestionTJ
         clsGrabaTelefonosOut GrabaTelefonos(clsGrabaTelefonosIn pInput);
 
         #endregion
+
+
+        #region HSM
+
+        clsGenPinPvvOut GenPinPVV(clsGenPinPvvIn pInput);
+
+        #endregion
     }
 }
