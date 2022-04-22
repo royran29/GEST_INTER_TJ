@@ -18,6 +18,8 @@ namespace GEST_INTER_TJ.Interfaces
             vServicio = pServicio;
         }
 
+        #region Canales
+
         /// <summary>
         /// Permite obtener el Identificador Syscards de una tarjeta por medio de datos como empresa, 
         /// identificación del TH y los últimos 4 dígitos de la tarjeta.
@@ -362,5 +364,141 @@ namespace GEST_INTER_TJ.Interfaces
                 throw ex;
             }
         }
+
+        #endregion
+
+        #region Clientes
+
+
+        /// <summary>
+        /// Entrada para mantenimiento de clientes
+        /// </summary>
+        /// <param name="pInput"></param>
+        /// <returns></returns>
+        public clsGrabaClientesOut GrabaClientes(clsGrabaClientesIn pInput)
+        {
+            clsGrabaClientesOut vResultado = new clsGrabaClientesOut();
+
+            try
+            {
+                //Valida que los parametros no sean nulos
+                if (!String.IsNullOrEmpty(pInput.Usuario)
+                     && !String.IsNullOrEmpty(pInput.Estacion)
+                     && !String.IsNullOrEmpty(pInput.Oficina)
+                     && !String.IsNullOrEmpty(pInput.Identifica)
+                     && !String.IsNullOrEmpty(pInput.TipoIdent)
+                     && !String.IsNullOrEmpty(pInput.PrimerApellido)
+                     && !String.IsNullOrEmpty(pInput.SegundoApellido)
+                     && !String.IsNullOrEmpty(pInput.PrimerNombre)
+                     && !String.IsNullOrEmpty(pInput.SegundoNombre)
+                     && !String.IsNullOrEmpty(pInput.EstadoCivil)
+                     && !String.IsNullOrEmpty(pInput.Sexo)
+                     && !String.IsNullOrEmpty(pInput.Email)
+                     && !String.IsNullOrEmpty(pInput.Empresa.ToString())
+                     && !String.IsNullOrEmpty(pInput.CodMigracion)
+                   )
+                {
+                    vResultado = vServicio.GrabaClientesDAO(pInput);
+
+                    return vResultado;
+                }
+                else
+                {
+                    vResultado.CodRespInterno = clsCodigoRespuesta.Error;
+                    vResultado.Mensaje = clsMensajes.ValoresRequeridos;
+                    return vResultado;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        /// <summary>
+        /// Entrada para mantenimiento de direcciones 
+        /// </summary>
+        /// <param name="pInput"></param>
+        /// <returns></returns>
+        public clsGrabaDireccionesOut GrabaDirecciones(clsGrabaDireccionesIn pInput)
+        {
+            clsGrabaDireccionesOut vResultado = new clsGrabaDireccionesOut();
+
+            try
+            {
+                //Valida que los parametros no sean nulos
+                if (!String.IsNullOrEmpty(pInput.Usuario)
+                     && !String.IsNullOrEmpty(pInput.Estacion)
+                     && !String.IsNullOrEmpty(pInput.Oficina)
+                     && !String.IsNullOrEmpty(pInput.TipoDirec)
+                     && !String.IsNullOrEmpty(pInput.Direccion)
+                     && !String.IsNullOrEmpty(pInput.Pais)
+                     && !String.IsNullOrEmpty(pInput.Provincia)
+                     && !String.IsNullOrEmpty(pInput.Ciudad)
+                     && !String.IsNullOrEmpty(pInput.Distrito)
+                     && !String.IsNullOrEmpty(pInput.Empresa.ToString())
+                     && !String.IsNullOrEmpty(pInput.Entidad.ToString())
+                     && !String.IsNullOrEmpty(pInput.Codigo.ToString())
+                   )
+                {
+                    vResultado = vServicio.GrabaDireccionesDAO(pInput);
+
+                    return vResultado;
+                }
+                else
+                {
+                    vResultado.CodRespInterno = clsCodigoRespuesta.Error;
+                    vResultado.Mensaje = clsMensajes.ValoresRequeridos;
+                    return vResultado;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        /// <summary>
+        /// Mantenimiento de telefonos
+        /// </summary>
+        /// <param name="pInput"></param>
+        /// <returns></returns>
+        public clsGrabaTelefonosOut GrabaTelefonos(clsGrabaTelefonosIn pInput)
+        {
+            clsGrabaTelefonosOut vResultado = new clsGrabaTelefonosOut();
+
+            try
+            {
+                //Valida que los parametros no sean nulos
+                if (!String.IsNullOrEmpty(pInput.UltUserActualiza)
+                     && !String.IsNullOrEmpty(pInput.UltEstacionActualiza)
+                     && !String.IsNullOrEmpty(pInput.Oficina)
+                     && !String.IsNullOrEmpty(pInput.TipoTelf)
+                     && !String.IsNullOrEmpty(pInput.Telefono)
+                     && !String.IsNullOrEmpty(pInput.Empresa.ToString())
+                     && !String.IsNullOrEmpty(pInput.Entidad.ToString())
+                     && !String.IsNullOrEmpty(pInput.Codigo.ToString())
+                   )
+                {
+                    vResultado = vServicio.GrabaTelefonosDAO(pInput);
+
+                    return vResultado;
+                }
+                else
+                {
+                    vResultado.CodRespInterno = clsCodigoRespuesta.Error;
+                    vResultado.Mensaje = clsMensajes.ValoresRequeridos;
+                    return vResultado;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
     }
 }
