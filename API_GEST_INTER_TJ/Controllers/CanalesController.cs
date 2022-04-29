@@ -130,8 +130,8 @@ namespace GEST_INTER_TJ.Controllers
         /// <param name="pInput"></param>
         /// <returns></returns>
         [HttpPost]
-        [Route("PagaCanales")]
-        public ActionResult<clsPagoCanalesOUT> ConsultaSaldos(clsPagoCanalesIN pInput)
+        [Route("PagoCanales")]
+        public ActionResult<clsPagoCanalesOUT> PagoCanales(clsPagoCanalesIN pInput)
         {
             clsPagoCanalesOUT resultado = vGestiones.PagoCanales(pInput);
 
