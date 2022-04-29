@@ -171,7 +171,7 @@ namespace GEST_INTER_TJ.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("RedencionPuntos")]
-        public ActionResult<clsRedencionOUT> RendencionPuntos(clsRedencionIN pInput)
+        public ActionResult<clsRedencionOUT> RedencionPuntos(clsRedencionIN pInput)
         {
             clsRedencionOUT resultado = vGestiones.RedencionPuntos(pInput);
 
@@ -185,7 +185,7 @@ namespace GEST_INTER_TJ.Controllers
 
 
         /// <summary>
-        /// Actualizacion de tipo de camibio
+        /// Actualizacion de tipo de cambio
         /// </summary>
         /// <param name="pInput"></param>
         /// <returns></returns>
