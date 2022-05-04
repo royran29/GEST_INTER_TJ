@@ -397,7 +397,50 @@ namespace GEST_INTER_TJ.Utils
 
 
     #region Gestiones
-
+    public class clsGrabaTramiteIN
+    {
+        public string Msgtype { get; set; }
+        public int IdTramite { get; set; }
+        public string Oficina { get; set; }
+        public int Entidad { get; set; }
+        public int Empresa { get; set; }
+        public string UsuarioTramite { get; set; }
+        public string FechaProceso { get; set; }
+        public string HoraProceso { get; set; }
+        public string TarjetaId { get; set; }
+        public string TarjetaReal { get; set; }
+        public string Tipo { get; set; }
+        public string Moneda { get; set; }
+        public string Tipotrx { get; set; }
+        public string RazonTrx { get; set; }
+        public decimal Valor { get; set; }
+        public string Bin { get; set; }
+        public string Afinidad { get; set; }
+        public string CodDisenio { get; set; }
+        public int CodCliente { get; set; }
+        public decimal Porcentaje { get; set; }
+        public string FechaDesde { get; set; }
+        public string FechaHasta { get; set; }
+        public string Codigo { get; set; }
+        public string Estado { get; set; }
+        public string Subestado { get; set; }
+        public string Motivo { get; set; }
+        public string Descripcion1 { get; set; }
+        public string Descripcion2 { get; set; }
+        public string RutaDeEntrega { get; set; }
+        public string Parentesco { get; set; }
+        public int Plazo { get; set; }
+        public string TarjetaId2 { get; set; }
+        public string Moneda2 { get; set; }
+        public string TipoTramite { get; set; }
+        public string Medios { get; set; }
+        public string CodMovimExt { get; set; }
+    }
+    public class clsGrabaTramiteOut
+    {
+        public string Mensaje { get; set; }
+        public string CodRespInterno { get; set; }
+    }
 
     #endregion
 

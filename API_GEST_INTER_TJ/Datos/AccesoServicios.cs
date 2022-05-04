@@ -277,6 +277,7 @@ namespace GEST_INTER_TJ.Datos
 
         #endregion
 
+
         #region Clientes
 
 
@@ -356,6 +357,37 @@ namespace GEST_INTER_TJ.Datos
 
 
         #endregion
+
+
+        #region Gestiones
+
+        /// <summary>
+        /// Procedimiento que graba tramites
+        /// </summary>
+        /// <param name="pInput"></param>
+        /// <returns></returns>
+        public clsGrabaTramiteOut GrabaTramiteDAO(clsGrabaTramiteIN pInput)
+        {
+            clsGrabaTramiteOut vResultado = new clsGrabaTramiteOut();
+
+            try
+            {
+                vResultado.CodRespInterno = clsCodigoRespuesta.Exito;
+                vResultado.Mensaje = clsMensajes.Exito;
+
+            }
+            catch (Exception ex)
+            {
+                vResultado.CodRespInterno = clsCodigoRespuesta.Error;
+                vResultado.Mensaje = clsMensajes.ErrorRegistro;
+
+            }
+            return vResultado;
+        }
+
+
+        #endregion
+
 
         #region HSM
         /// <summary>

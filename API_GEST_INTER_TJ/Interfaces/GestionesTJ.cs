@@ -367,6 +367,49 @@ namespace GEST_INTER_TJ.Interfaces
 
         #endregion
 
+
+        #region Gestiones
+
+        /// <summary>
+        /// Procedimiento que graba tramites
+        /// </summary>
+        /// <param name="pInput"></param>
+        /// <returns></returns>
+        public clsGrabaTramiteOut GrabaTramite(clsGrabaTramiteIN pInput)
+        {
+            clsGrabaTramiteOut vResultado = new clsGrabaTramiteOut();
+
+            try
+            {
+                if (!String.IsNullOrEmpty(pInput.Oficina)
+                 && !String.IsNullOrEmpty(pInput.Entidad.ToString())
+                 && !String.IsNullOrEmpty(pInput.Empresa.ToString())
+                 && !String.IsNullOrEmpty(pInput.UsuarioTramite)
+                 && !String.IsNullOrEmpty(pInput.FechaProceso.ToString())
+                 && !String.IsNullOrEmpty(pInput.HoraProceso.ToString())
+                 && !String.IsNullOrEmpty(pInput.TarjetaId.ToString()))
+                {
+                    vResultado = vServicio.GrabaTramiteDAO(pInput);
+                    return vResultado;
+                }
+                else
+                {
+                    vResultado.CodRespInterno = clsCodigoRespuesta.Error;
+                    vResultado.Mensaje = clsMensajes.ValoresRequeridos;
+                    return vResultado;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+
+        #endregion
+
+
         #region Clientes
 
 
@@ -500,6 +543,7 @@ namespace GEST_INTER_TJ.Interfaces
         }
 
         #endregion
+
 
         #region HSM
 

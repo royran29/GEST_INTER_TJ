@@ -31,6 +31,7 @@ namespace GEST_INTER_TJ.Interfaces.IGestionTJ
 
         #endregion
 
+
         #region Clientes
 
         clsGrabaClientesOut GrabaClientes(clsGrabaClientesIn pInput);
@@ -42,10 +43,17 @@ namespace GEST_INTER_TJ.Interfaces.IGestionTJ
         #endregion
 
 
+        #region Gestiones
+
+        clsGrabaTramiteOut GrabaTramite(clsGrabaTramiteIN pInput);
+
+        #endregion
+
         #region HSM
 
         clsGenPinPvvOut GenPinPVV(clsGenPinPvvIn pInput);
 
         #endregion
+
     }
 }
